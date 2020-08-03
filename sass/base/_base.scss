@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before{
+    padding:0px;
+    margin:0px;
+    box-sizing: inherit;
+}
+html{
+    //this defines what one rem is 
+    font-size: 62.5%;
+    /* if we dont mention this then the default fotsize is 16px which in percent is 100% so for 10px it would ne 62.5% */
+}
+body{
+    box-sizing: border-box;
+}
