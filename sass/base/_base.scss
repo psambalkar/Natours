@@ -8,8 +8,26 @@
 html{
     //this defines what one rem is 
     font-size: 62.5%;
+    @include respond(tab-land){  // 1rem=9px   9/16= 56.25%
+        font-size: 56.250%;
+    }
+    @include respond(tab-port){
+        font-size: 50%;     //1rem =8px   8/16=50%
+    }
+    @include respond(phone){    //same for above always sepcify largest media query frst
+        font-size: 50%;
+    }
+    
+    @include respond(big-desktop){
+        font-size: 75%;          //1rem=12px 12/16=75%
+    }      
+
     /* if we dont mention this then the default fotsize is 16px which in percent is 100% so for 10px it would ne 62.5% */
 }
 body{
     box-sizing: border-box;
+    padding: 3rem;
+    @include respond(tab-port){
+        padding: 0;     //1rem =8px   8/16=50%
+    }
 }
